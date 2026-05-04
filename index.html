@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Almi's Personal Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  
+<!-- MUSIC PLAYER -->
+  <div class="star" id="musicStar" title="Click to open music player">⭐</div>
+
+  <div class="player-box" id="playerBox">
+    <div class="player-header" id="dragHandle">
+      <span class="music-title">calm music to chill your nerves~</span>
+    </div>
+
+    <audio id="bgMusic" controls></audio>
+
+    <div class="controls">
+      <button id="prevBtn">⏮</button>
+      <button id="playBtn">▶</button>
+      <button id="nextBtn">⏭</button>
+    </div>
+
+    <select id="songSelect"></select>
+  </div>
+
+ 
+  <!-- HOME -->
+  <main class="card">
+    <div class="header">home</div>
+    <div class="content">
+      <h1>hi! <span class="highlight">i'm almi</span></h1>
+      <p class="subtitle">let's get to know each other digitally (˶˃ ᵕ ˂˶)</p>
+
+      <div class="icons">
+        <div class="icon" data-modal="about">
+          <img src="https://cdn-icons-png.flaticon.com/512/471/471664.png" alt="about" />
+          <p>about me</p>
+        </div>
+        <div class="icon" data-modal="portfolio">
+          <img src="https://cdn-icons-png.flaticon.com/512/8786/8786238.png" alt="portfolio" />
+          <p>portfolio</p>
+        </div>
+        <div class="icon" data-modal="socials">
+          <img src="https://cdn-icons-png.flaticon.com/512/14418/14418671.png" alt="socials" />
+          <p>socials</p>
+        </div>
+        <div class="icon" data-modal="fandom">
+          <img src="https://cdn-icons-png.flaticon.com/512/4121/4121044.png" alt="fandom" />
+          <p>fandoms</p>
+        </div>
+        <div class="icon" data-modal="contact">
+          <img src="https://cdn-icons-png.flaticon.com/512/646/646094.png" alt="contact" />
+          <p>contact</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+<!-- FOOTER -->
+  <footer>
+    <div class="socials">
+      <a href="https://www.facebook.com/shiiroou"> <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="Facebook icon" /></a>
+      <a href="https://www.instagram.com/kurapic.a?igsh=Zzd1bmZ1MnNwZHMx"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" /></a>
+    </div>
+    <p>© 2025 Almira Manhic</p>
+  </footer>
+
+  <!-- ABOUT ME -->
+  <div id="about" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="profile">
+        <img src="Almira.png" alt="avatar" />
+        <div>
+          <h2>Almira Joyce A. Manhic</h2>
+          <p>Junior BS in Information Technology Student</p>
+          <p>Specialization Track: <a href="#" class="highlight">Business Analytics</a></p>
+        </div>
+      </div>
+      <section class="section-content">
+          <h3>HOBBIES:</h3>
+          <ul>
+            <li>Art & Crafts</li>
+            <li>Music <i>(playing the guitar & ukulele)</i></li>
+            <li>Internet Games</li>
+          </ul>
+
+          <h3>LIKES:</h3>
+          <ul>
+            <li>Sour Foods <i>(sweet/savory)</i></li>
+            <li>Matcha, Matcha, Matcha</li>
+            <li>Cinnamoroll-coded things~</li>
+            <li>Musicals</li>
+          </ul>
+
+          <h3>DISLIKES:</h3>
+          <ul>
+            <li>Insects</li>
+            <li>Sweating <i>(a lot)</i></li>
+            <li>Not-so-cutesy things</li>
+          </ul>
+      </section>
+    </div>
+  </div>
+
+  <!-- PORTFOLIO -->
+  <div id="portfolio" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>PORTFOLIO</h2>
+      <p>These are the graphical pieces I've made so far!</p>
+        <section class="skills-section">
+          <h3>Software tools I frequently use:</h3>
+          <p>(editing photos & videos)</p>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <img src="canva.png" alt="Canva logo">
+              <figcaption>Canva</figcaption>
+            </div>
+            <div class="skill-item">
+              <img src="capcut.jpg" alt="CapCut logo">
+              <figcaption>Capcut</figcaption>
+            </div>
+            <div class="skill-item">
+              <img src="filmora.png" alt="Filmora logo">
+              <figcaption>Filmora</figcaption>
+            </div>
+            <div class="skill-item">
+              <img src="ibispaint.png" alt="IbisPaint logo">
+              <figcaption>Ibis Paint</figcaption>
+            </div>
+          </div>
+        </section>
+          <hr>
+        <h3>Graphic Posters</h3>
+        <div class="fandom-gallery">
+          <div class="fandom-item">
+              <img src="Glue & Scissors.jpg" alt="Glue & Scissors" />
+              <figcaption>Glue & Scissors</figcaption>
+          </div>
+          <div class="fandom-item">
+              <img src="Amantes Lunae.jpg" alt="Amantes Lunae"/>
+              <figcaption>Amantes Lunae</figcaption>
+          </div>
+          <div class="fandom-item">
+              <img src="SQUASH.jpg" alt="The Reinvented Kitchen"/>
+              <figcaption>The Reinvented Kitchen</figcaption>
+          </div>
+          <div class="fandom-item">
+              <img src="IT1103 - Group 3 Ang Pagsilang Ng Konkretong Nayon.jpg" alt="Ang Pagsilang ng Konkretong Nayon" />
+              <figcaption>Ang Pagsilang ng Konkretong Nayon: Documentary Poster</figcaption>
+          </div>
+          <div class="fandom-item">
+              <img src="Valentines Poster.jpg" alt="Love Beyond"/>
+              <figcaption>Love Beyond: Valentines Poster</figcaption>
+          </div>
+        </div>
+          <hr>
+        <h3>Infographics</h3>
+        <div class="fandom-gallery">
+          <div class="fandom-item">
+              <img src="Career Guidance.jpg" alt="Ang Pagsilang ng Konkretong Nayon" />
+              <figcaption>Career Guidance (2022)</figcaption>
+          </div>
+          <div class="fandom-item">
+              <img src="CWTS.jpg" alt="Love Beyond"/>
+              <figcaption>CWTS: Disaster Risk Management (2023)</figcaption>
+          </div>
+          <div class="fandom-item">
+              <img src="ASEAN LITR - INFOGRAPHICS.jpg" alt="Filipino Traits"/>
+              <figcaption>Asean Literature: Vietnam (2024)</figcaption>
+          </div>
+        </div>
+          <hr>
+        <h3>Video-Editing</h3>
+        <p>TECHNOFUSION 2023: AD-Making Competition (Champion)</p>
+        <div class="video-container">
+          <video width="100%" controls>
+            <source src="CASA MADRIGAL - TEAM 02.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>          
+    </div>
+  </div>
+
+  <!-- Socials -->
+  <div id="socials" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>SOCIALS</h2>
+      <p>Reach out to me via these social media platforms!</p>
+        <hr>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <a href="https://www.facebook.com/shiiroou"><img src="facebook.png" alt="Facebook"/></a>
+              <figcaption>Facebook</figcaption>
+            </div>
+            <div class="skill-item">
+              <a href="https://www.instagram.com/kurapic.a?igsh=Zzd1bmZ1MnNwZHMx"><img src="Instagram.png" alt="Instagram" /></a>
+              <figcaption>Instagram</figcaption>
+            </div>
+            <div class="skill-item">
+              <a href="https://www.linkedin.com/in/almira-manhic-bb7181383/"><img src="Linkedin.png" alt="LinkedIn" /></a>
+              <figcaption>LinkedIn</figcaption>
+            </div>
+            <div class="skill-item">
+              <a href="https://github.com/kzurta"><img src="Github.png" alt="GitHub" /></a>
+              <figcaption>GitHub</figcaption>
+            </div>
+          </div>
+    </div>
+  </div>
+
+<!-- FANDOMS -->
+<div id="fandom" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>FANDOMS</h2>
+    <p>These are the shows and games that I'm interested in!</p>
+      <hr>
+    <h3>Animes</h3>
+    <div class="fandom-gallery">
+      <div class="fandom-item">
+        <img src="lovely_complex.jpg" alt="Lovely Complex" />
+        <figcaption>Lovely Complex</figcaption>
+      </div>
+      <div class="fandom-item">
+        <img src="ranma.jpg" alt="Ranma 1/2" />
+        <figcaption>Ranma 1/2</figcaption>
+      </div>
+      <div class="fandom-item">
+        <img src="wotakoi.jpg" alt="WOTAKOI: Love is Hard for Otaku" />
+        <figcaption>WOTAKOI: Love is Hard for Otaku</figcaption>
+      </div>
+      <div class="fandom-item">
+        <img src="my_roommate_is_a_cat.jpg" alt="My Roommate is a Cat" />
+        <figcaption>My Roommate is a Cat</figcaption>
+      </div>
+      <div class="fandom-item">
+        <img src="your_lie_in_april.jpg" alt="Your Lie in April" />
+        <figcaption>Your Lie in April</figcaption>
+      </div>
+      <div class="fandom-item">
+        <img src="kamisama_kiss.jpg" alt="Kamisama Hajimemashita" />
+        <figcaption>Kamisama Hajimemashita</figcaption>
+      </div>
+      <div class="fandom-item">
+        <img src="spy_x_family.jpg" alt="Spy X Family" />
+        <figcaption>Spy X Family</figcaption>
+      </div>
+      <div class="fandom-item">
+        <img src="erased.jpg" alt="Erased" />
+        <figcaption>Erased</figcaption>
+      </div>
+      <div class="fandom-item">
+        <img src="death_parade.jpg" alt="Death Parade" />
+        <figcaption>Death Parade</figcaption>
+      </div>
+      <div class="fandom-item">
+        <img src="DanDadan.png" alt="DanDaDan" />
+        <figcaption>DanDaDan</figcaption>
+      </div>
+      <div class="fandom-item">
+        <img src="TBHK.jpg" alt="Toilet-Bound Hanako-kun" />
+        <figcaption>Toilet-Bound Hanako-kun</figcaption>
+      </div>
+      <div class="fandom-item">
+        <img src="demon_slayer.jpg" alt="Demon Slayer" />
+        <figcaption>Demon Slayer</figcaption>
+      </div>
+      <div class="fandom-item">
+        <img src="hunter_x_hunter.png" alt="Hunter X Hunter" />
+        <figcaption>Hunter X Hunter</figcaption>
+      </div>
+      <div class="fandom-item">
+        <img src="attack_on_titan.jpg" alt="Attack on Titan" />
+        <figcaption>Attack on Titan</figcaption>
+      </div>
+      <div class="fandom-item">
+        <img src="neon_genesis_evangelion.jpg" alt="Neon Genesis Evangelion" />
+        <figcaption>Neon Genesis Evangelion</figcaption>
+      </div>
+      <div class="fandom-item">
+        <img src="fullmetal_alchemist.jpg" alt="Fullmetal Alchemist" />
+        <figcaption>Fullmetal Alchemist</figcaption>
+      </div>
+      <div class="fandom-item">
+        <img src="corpse_party.jpg" alt="Corpse Party" />
+        <figcaption>Corpse Party</figcaption>
+      </div>
+      <div class="fandom-item">
+        <img src="devilman_crybaby.jpg" alt="Devil Man Crybaby" />
+        <figcaption>Devil Man Crybaby</figcaption>
+      </div>
+      <div class="fandom-item">
+        <img src="junji_ito_collection.jpg" alt="Junji Ito: Collection" />
+        <figcaption>Junji Ito: Collection</figcaption>
+      </div>
+      <div class="fandom-item">
+        <img src="junji_ito_maniac.jpg" alt="Junji Ito: Maniac" />
+        <figcaption>Junji Ito: Maniac</figcaption>
+      </div>
+      <div class="fandom-item">
+        <img src="uzumaki.jpg" alt="Junji Ito: Uzumaki" />
+        <figcaption>Junji Ito: Uzumaki</figcaption>
+      </div>
+    </div>
+      <hr>
+    <h3>Games</h3>
+    <div  class="fandom-gallery">
+      <div class="fandom-item">
+        <img src="valorant.jpg" alt="Valorant">
+        <figcaption>Valorant</figcaption>
+      </div>
+      <div class="fandom-item">
+        <img src="genshin_impact.jpg" alt="Genshin Impact">
+        <figcaption>Genshin Impact</figcaption>
+      </div>
+      <div class="fandom-item">
+        <img src="project_sekai.jpg" alt="Project Sekai: COLORFUL STAGE!">
+        <figcaption>Project Sekai: COLORFUL STAGE!</figcaption>
+      </div>
+    </div>
+      <hr>
+    <h3>Horror Games</h3>
+    <div class="fandom-gallery">
+      <div class="fandom-item">
+        <img src="five_nights_at_freddy's.jpg" alt="Five Night's at Freddy's" />
+        <p>Five Night's at Freddy's</p>
+      </div>
+      <div class="fandom-item">
+        <img src="poppy_playtime.jpg" alt="Poppy Playtime" />
+        <figcaption>Poppy Playtime</figcaption>
+      </div>
+      <div class="fandom-item">
+        <img src="indigo_park.jpg" alt="Indigo Park" />
+        <figcaption>Indigo Park</figcaption>
+      </div>
+      <div class="fandom-item">
+        <img src="bendy_and_the_ink_machine.jfif" alt="Bendy and the Ink Machine" />
+        <p>Bendy and the Ink Machine</p>
+      </div>
+      <div class="fandom-item">
+        <img src="doki_doki_literature_club.jpg" alt="Doki Doki Literature Club" />
+        <figcaption>Doki Doki Literature Club</figcaption>
+      </div>
+      <div class="fandom-item">
+        <img src="silent_hill_f.jpg" alt="Silent Hill F" />
+        <p>Silent Hill F</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT MODAL -->
+<div id="contact" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>CONTACT</h2>
+    <hr>
+      <p>Message me anything! ꉂ(˵˃ ᗜ ˂˵)</p>
+
+    <form id="contactForm">
+      <textarea name="question" rows="15" cols="80" placeholder="Type something..."></textarea>
+      <button type="submit">Submit</button>
+      <hr>
+    </form>
+
+    <p class="sub">
+      For inquiries, you can reach me via email:
+      <a href="mailto:23-00370@g.batstate-u.edu.ph">23-00370@g.batstate-u.edu.ph</a>
+    </p>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

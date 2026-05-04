@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Light Blue Audio Player</title>
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #f7fbff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .player {
+    width: 90%;
+    max-width: 700px;
+    background: #e9f5ff;
+    border: 1px solid #c7e3ff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(150, 200, 255, 0.2);
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .controls button {
+    background: none;
+    border: none;
+    color: #4a90e2;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .controls button:hover {
+    transform: scale(1.2);
+  }
+
+  .progress-container {
+    flex: 1;
+    height: 6px;
+    background: #d9ebff;
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #70b8ff, #a7d4ff);
+    border-radius: 3px;
+  }
+
+  .info {
+    font-size: 13px;
+    color: #3d6fa1;
+    flex: 0 0 auto;
+  }
+
+  .time {
+    font-size: 12px;
+    color: #639cd9;
+    margin-left: 6px;
+  }
+
+  audio {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="player">
+  <div class="controls">
+    <button id="prev">⏮️</button>
+    <button id="play">▶️</button>
+    <button id="next">⏭️</button>
+  </div>
+  <div class="progress-container" id="progress-container">
+    <div class="progress" id="progress"></div>
+  </div>
+  <div class="info">
+    <span id="title">No Track</span>
+    <span class="time" id="time">00:00</span>
+  </div>
+  <audio id="audio" src="your-music.mp3"></audio>
+</div>
+
+<script>
+  const playBtn = document.getElementById('play');
+  const prevBtn = document.getElementById('prev');
+  const nextBtn = document.getElementById('next');
+  const audio = document.getElementById('audio');
+  const progress = document.getElementById('progress');
+  const progressContainer = document.getElementById('progress-container');
+  const title = document.getElementById('title');
+  const timeEl = document.getElementById('time');
+
+  let isPlaying = false;
+
+  // Toggle play/pause
+  playBtn.addEventListener('click', () => {
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      audio.play();
+    }
+  });
+
+  audio.addEventListener('play', () => {
+    isPlaying = true;
+    playBtn.textContent = '⏸️';
+  });
+
+  audio.addEventListener('pause', () => {
+    isPlaying = false;
+    playBtn.textContent = '▶️';
+  });
+
+  // Update progress bar
+  audio.addEventListener('timeupdate', () => {
+    const { currentTime, duration } = audio;
+    const progressPercent = (currentTime / duration) * 100;
+    progress.style.width = `${progressPercent}%`;
+    timeEl.textContent = formatTime(currentTime);
+  });
+
+  progressContainer.addEventListener('click', (e) => {
+    const width = progressContainer.clientWidth;
+    const clickX = e.offsetX;
+    const duration = audio.duration;
+    audio.currentTime = (clickX / width) * duration;
+  });
+
+  function formatTime(sec) {
+    const min = Math.floor(sec / 60);
+    const s = Math.floor(sec % 60).toString().padStart(2, '0');
+    return `${min}:${s}`;
+  }
+
+  // Demo controls (optional)
+  prevBtn.addEventListener('click', () => audio.currentTime = 0);
+  nextBtn.addEventListener('click', () => audio.currentTime = audio.duration);
+
+</script>
+
+</body>
+</html>
